@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+	<label>
+		Products: <br>
+		<app-products-dropdown [control]="form.controls['productId']"></app-products-dropdown>
+	</label>
+
+	<label>
+		Customers: <br>
+		<app-customers-dropdown [control]="form.controls['customerId']"></app-customers-dropdown>
+	</label>
+
+	<label>
+		Sellers: <br>
+		<app-sellers-dropdown [control]="form.controls['sellerId']"></app-sellers-dropdown>
+	</label>
+
+	<label>
+		Product Amount: <br>
+		<kendo-numerictextbox
+			[value]="0"
+			formControlName="productAmount"
+			[min]="0"
+			format="n0">
+		</kendo-numerictextbox>
+	</label>
+
+	<label>
+		<button type="submit" kendoButton [primary]="true">Add deal</button>
+	</label>
+</form>

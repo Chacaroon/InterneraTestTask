@@ -1,0 +1,11 @@
+<kendo-dropdownlist
+	[formControl]="control"
+	[data]="sellers"
+	[defaultItem]="{ name: 'Select a seller', id: null }"
+	[textField]="'name'"
+	[valueField]="'id'"
+	[valuePrimitive]="true">
+	<ng-template kendoDropDownListItemTemplate kendoDropDownListValueTemplate let-seller>
+		{{seller.name}} {{seller.company ? ' - ' + seller.company.name : ''}}
+	</ng-template>
+</kendo-dropdownlist>

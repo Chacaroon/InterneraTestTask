@@ -1,0 +1,10 @@
+<br>
+<div *ngIf="deals">
+	<kendo-grid [data]="deals">
+		<kendo-grid-column title="Seller" field="seller.name"></kendo-grid-column>
+		<kendo-grid-column title="Company" field="seller.company.name"></kendo-grid-column>
+		<kendo-grid-column title="Customer" field="customer.name"></kendo-grid-column>
+		<kendo-grid-column title="Product" field="product.name"></kendo-grid-column>
+		<kendo-grid-column title="Product amount" field="productAmount"></kendo-grid-column>
+	</kendo-grid>
+</div>
