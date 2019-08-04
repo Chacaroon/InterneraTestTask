@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BLL.DTOs.Company;
 
-namespace BLL.DTOs
+namespace BLL.DTOs.Seller
 {
 	public class SellerDTO
 	{

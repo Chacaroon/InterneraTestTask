@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
-using AutoMapper.QueryableExtensions;
+﻿using AutoMapper.QueryableExtensions;
 using BLL.Abstractions;
-using BLL.DTOs;
+using BLL.DTOs.Product;
 using DAL.Abstractions;
 using DAL.Entities;
+using System.Collections.Generic;
 
 namespace BLL.Services
 {

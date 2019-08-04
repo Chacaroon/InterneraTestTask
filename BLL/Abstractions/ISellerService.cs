@@ -1,7 +1,5 @@
-﻿using System;
+﻿using BLL.DTOs.Seller;
 using System.Collections.Generic;
-using System.Text;
-using BLL.DTOs;
 
 namespace BLL.Abstractions
 {

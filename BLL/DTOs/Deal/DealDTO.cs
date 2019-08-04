@@ -1,4 +1,8 @@
-﻿namespace BLL.DTOs
+﻿using BLL.DTOs.Customer;
+using BLL.DTOs.Product;
+using BLL.DTOs.Seller;
+
+namespace BLL.DTOs.Deal
 {
 	public class DealDTO
 	{
