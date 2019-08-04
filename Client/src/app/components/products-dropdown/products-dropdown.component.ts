@@ -12,7 +12,7 @@ export class ProductsDropdownComponent implements OnInit {
 
 	@Input() control: AbstractControl;
 
-	products: Array<Product> = [{name: 'Select a product', id: null}];
+	products: Array<Product> = [];
 
 	constructor(private productService: ProductService) {
 	}
