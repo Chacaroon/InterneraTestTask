@@ -14,7 +14,7 @@ namespace DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -31,21 +31,10 @@ namespace DAL.Migrations
                     b.ToTable("Companies");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            Name = "Company 1"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            Name = "Company 2"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            Name = "Company 3"
-                        });
+                        new { Id = 1L, Name = "Company 1" },
+                        new { Id = 2L, Name = "Company 2" },
+                        new { Id = 3L, Name = "Company 3" }
+                    );
                 });
 
             modelBuilder.Entity("DAL.Entities.Customer", b =>
@@ -61,21 +50,10 @@ namespace DAL.Migrations
                     b.ToTable("Customers");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            Name = "Customer 1"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            Name = "Customer 2"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            Name = "Customer 3"
-                        });
+                        new { Id = 1L, Name = "Customer 1" },
+                        new { Id = 2L, Name = "Customer 2" },
+                        new { Id = 3L, Name = "Customer 3" }
+                    );
                 });
 
             modelBuilder.Entity("DAL.Entities.Deal", b =>
@@ -103,30 +81,10 @@ namespace DAL.Migrations
                     b.ToTable("Deals");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CustomerId = 1L,
-                            ProductAmount = 1,
-                            ProductId = 1L,
-                            SellerId = 1L
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CustomerId = 2L,
-                            ProductAmount = 2,
-                            ProductId = 2L,
-                            SellerId = 2L
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            CustomerId = 3L,
-                            ProductAmount = 3,
-                            ProductId = 3L,
-                            SellerId = 3L
-                        });
+                        new { Id = 1L, CustomerId = 1L, ProductAmount = 1, ProductId = 1L, SellerId = 1L },
+                        new { Id = 2L, CustomerId = 2L, ProductAmount = 2, ProductId = 2L, SellerId = 2L },
+                        new { Id = 3L, CustomerId = 3L, ProductAmount = 3, ProductId = 3L, SellerId = 3L }
+                    );
                 });
 
             modelBuilder.Entity("DAL.Entities.Product", b =>
@@ -142,21 +100,10 @@ namespace DAL.Migrations
                     b.ToTable("Products");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            Name = "Product 1"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            Name = "Product 2"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            Name = "Product 3"
-                        });
+                        new { Id = 1L, Name = "Product 1" },
+                        new { Id = 2L, Name = "Product 2" },
+                        new { Id = 3L, Name = "Product 3" }
+                    );
                 });
 
             modelBuilder.Entity("DAL.Entities.Seller", b =>
@@ -176,24 +123,10 @@ namespace DAL.Migrations
                     b.ToTable("Sellers");
 
                     b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CompanyId = 1L,
-                            Name = "Seller 1"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CompanyId = 2L,
-                            Name = "Seller 2"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            CompanyId = 3L,
-                            Name = "Seller 3"
-                        });
+                        new { Id = 1L, CompanyId = 1L, Name = "Seller 1" },
+                        new { Id = 2L, CompanyId = 2L, Name = "Seller 2" },
+                        new { Id = 3L, CompanyId = 3L, Name = "Seller 3" }
+                    );
                 });
 
             modelBuilder.Entity("DAL.Entities.Deal", b =>

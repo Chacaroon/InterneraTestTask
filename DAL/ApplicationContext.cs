@@ -1,6 +1,5 @@
 ﻿using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace DAL
 {
@@ -20,43 +19,41 @@ namespace DAL
 			#region DataSeeding
 
 			modelBuilder.Entity<Company>()
-						.HasData(Enumerable.Range(1, 3).Select(i => new Company()
-						{
-							Id = i,
-							Name = $"Company {i}"
-						}));
+						.HasData(new[] {
+							new Company { Id = 1, Name = "Company 1" },
+							new Company { Id = 2, Name = "Company 2" },
+							new Company { Id = 3, Name = "Company 3" },
+						});
 
 			modelBuilder.Entity<Customer>()
-						.HasData(Enumerable.Range(1, 3).Select(i => new Customer()
+						.HasData(new[]
 						{
-							Id = i,
-							Name = $"Customer {i}"
-						}));
+							new Customer() { Id = 1, Name = "Customer 1" },
+							new Customer() { Id = 2, Name = "Customer 2" },
+							new Customer() { Id = 3, Name = "Customer 3" },
+						});
 
 			modelBuilder.Entity<Seller>()
-						.HasData(Enumerable.Range(1, 3).Select(i => new Seller()
-						{
-							Id = i,
-							CompanyId = i,
-							Name = $"Seller {i}"
-						}));
+						.HasData(new[] {
+							new Seller() { Id = 1, CompanyId = 1, Name = "Seller 1" },
+							new Seller() { Id = 2, CompanyId = 2, Name = "Seller 2" },
+							new Seller() { Id = 3, CompanyId = 3, Name = "Seller 3" },
+						});
 
 			modelBuilder.Entity<Product>()
-						.HasData(Enumerable.Range(1, 3).Select(i => new Product()
+						.HasData(new[]
 						{
-							Id = i,
-							Name = $"Product {i}"
-						}));
+							new Product() { Id = 1, Name = "Product 1" },
+							new Product() { Id = 2, Name = "Product 2" },
+							new Product() { Id = 3, Name = "Product 3" },
+						});
 
 			modelBuilder.Entity<Deal>()
-						.HasData(Enumerable.Range(1, 3).Select(i => new Deal()
-						{
-							Id = i,
-							CustomerId = i,
-							ProductId = i,
-							SellerId = i,
-							ProductAmount = i
-						}));
+						.HasData(new[] {
+							new Deal() { Id = 1, CustomerId = 1, ProductId = 1, SellerId = 1, ProductAmount = 1 },
+							new Deal() { Id = 2, CustomerId = 2, ProductId = 2, SellerId = 2, ProductAmount = 2 },
+							new Deal() { Id = 3, CustomerId = 3, ProductId = 3, SellerId = 3, ProductAmount = 3 },
+						});
 
 			#endregion
 
